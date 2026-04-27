@@ -65,7 +65,7 @@ Additionally, Role-Based Access Control (RBAC) is implemented to restrict access
 ### 👤 User Module
 
 #### Login
-![Login](screenshots/login.jpeg)
+![Login](login.jpeg)
 
 #### Register
 ![Register](register.jpeg)
@@ -105,7 +105,7 @@ Additionally, Role-Based Access Control (RBAC) is implemented to restrict access
 ![User Management](usermanagement.jpeg)
 
 #### User Details
-![User Details](userdetails.jpeg)
+![User Detailes](userdetail.jpeg)
 
 #### File Management
 ![File Management](filemanagement.jpeg)
