@@ -62,10 +62,6 @@ Additionally, Role-Based Access Control (RBAC) is implemented to restrict access
 
 ## 📸 Screenshots
 
-> Screenshots are categorized into User Module and Admin Module for better understanding.
-
----
-
 ### 👤 User Module
 
 #### Login
