@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    
+    <display-name>Secure File Sharing System</display-name>
+    
+    <!-- Session Configuration -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+        <cookie-config>
+            <http-only>true</http-only>
+            <secure>false</secure>
+        </cookie-config>
+        <tracking-mode>COOKIE</tracking-mode>
+    </session-config>
+    
+    <!-- Filters -->
+    <filter>
+        <filter-name>AuthenticationFilter</filter-name>
+        <filter-class>com.securefileshare.filters.AuthenticationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    <filter>
+        <filter-name>AdminFilter</filter-name>
+        <filter-class>com.securefileshare.filters.AdminFilter</filter-class>
+    </filter>
+    
+    
+    <!-- Servlet Mappings -->
+    <servlet>
+        <servlet-name>AuthServlet</servlet-name>
+        <servlet-class>com.securefileshare.servlets.AuthServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AuthServlet</servlet-name>
+        <url-pattern>/auth</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>DashboardServlet</servlet-name>
+        <servlet-class>com.securefileshare.servlets.DashboardServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>com.securefileshare.servlets.AdminServlet</servlet-class>
+    </servlet>
+    
+    
+    <servlet>
+        <servlet-name>FileUploadServlet</servlet-name>
+        <servlet-class>com.securefileshare.servlets.FileUploadServlet</servlet-class>
+        <multipart-config>
+            <max-file-size>5368709120</max-file-size>
+            <max-request-size>5368709120</max-request-size>
+            <file-size-threshold>1048576</file-size-threshold>
+        </multipart-config>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FileUploadServlet</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>FileDownloadServlet</servlet-name>
+        <servlet-class>com.securefileshare.servlets.FileDownloadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FileDownloadServlet</servlet-name>
+        <url-pattern>/download</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>MyFilesServlet</servlet-name>
+        <servlet-class>com.securefileshare.servlets.MyFilesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyFilesServlet</servlet-name>
+        <url-pattern>/myfiles</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>SharedFilesServlet</servlet-name>
+        <servlet-class>com.securefileshare.servlets.SharedFilesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SharedFilesServlet</servlet-name>
+        <url-pattern>/shared</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ProfileServlet</servlet-name>
+        <servlet-class>com.securefileshare.servlets.ProfileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProfileServlet</servlet-name>
+        <url-pattern>/profile</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>DeleteFileServlet</servlet-name>
+        <servlet-class>com.securefileshare.servlets.DeleteFileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteFileServlet</servlet-name>
+        <url-pattern>/delete-file</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>GoogleDriveServlet</servlet-name>
+        <servlet-class>com.securefileshare.servlets.GoogleDriveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GoogleDriveServlet</servlet-name>
+        <url-pattern>/drive</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>HelpServlet</servlet-name>
+        <servlet-class>com.securefileshare.servlets.HelpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelpServlet</servlet-name>
+        <url-pattern>/help</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>SecurityServlet</servlet-name>
+        <servlet-class>com.securefileshare.servlets.SecurityServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SecurityServlet</servlet-name>
+        <url-pattern>/security</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>RecentActivityServlet</servlet-name>
+        <servlet-class>com.securefileshare.servlets.RecentActivityServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RecentActivityServlet</servlet-name>
+        <url-pattern>/recent</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.securefileshare.servlets.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CheckHashVerificationServlet</servlet-name>
+        <servlet-class>com.securefileshare.servlets.CheckHashVerificationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckHashVerificationServlet</servlet-name>
+        <url-pattern>/check-hash-verification</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ClearDownloadSessionServlet</servlet-name>
+        <servlet-class>com.securefileshare.servlets.ClearDownloadSessionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClearDownloadSessionServlet</servlet-name>
+        <url-pattern>/clear-download-session</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ClearUploadSessionServlet</servlet-name>
+        <servlet-class>com.securefileshare.servlets.ClearUploadSessionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClearUploadSessionServlet</servlet-name>
+        <url-pattern>/clear-upload-session</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>OTPVerificationServlet</servlet-name>
+        <servlet-class>com.securefileshare.servlets.OTPVerificationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OTPVerificationServlet</servlet-name>
+        <url-pattern>/verify-otp</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ResendOTPServlet</servlet-name>
+        <servlet-class>com.securefileshare.servlets.ResendOTPServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResendOTPServlet</servlet-name>
+        <url-pattern>/resend-otp</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Welcome File -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <!-- Error Pages -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/jsp/error/404.jsp</location>
+    </error-page>
+    
+    <error-page>
+        <error-code>500</error-code>
+        <location>/jsp/error/500.jsp</location>
+    </error-page>
+    
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/jsp/error/error.jsp</location>
+    </error-page>
+    
+    <!-- MIME Type Mappings -->
+    <mime-mapping>
+        <extension>jsp</extension>
+        <mime-type>text/html</mime-type>
+    </mime-mapping>
+    
+    <mime-mapping>
+        <extension>css</extension>
+        <mime-type>text/css</mime-type>
+    </mime-mapping>
+    
+    <mime-mapping>
+        <extension>js</extension>
+        <mime-type>application/javascript</mime-type>
+    </mime-mapping>
+</web-app>
