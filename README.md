@@ -68,50 +68,50 @@ Additionally, Role-Based Access Control (RBAC) is implemented to restrict access
 ![Login](screenshots/login.jpeg)
 
 #### Register
-![Register](screenshots/register.jpeg)
+![Register](register.jpeg)
 
 #### OTP Verification
-![OTP](screenshots/otp.jpeg)
+![OTP](otp.jpeg)
 
 #### User Dashboard
-![User Dashboard](screenshots/userdashboard.jpeg)
+![User Dashboard](userdashboard.jpeg)
 
 #### Upload File
-![Upload](screenshots/upload.jpeg)
+![Upload](upload.jpeg)
 
 #### Upload Success
-![Upload Success](screenshots/uploadsuccess.jpeg)
+![Upload Success](uploadsuccess.jpeg)
 
 #### Download File
-![Decrypt Password](screenshots/decryptpassword.jpeg)
+![Decrypt Password](decryptpassword.jpeg)
 
 #### My Files
-![My Files](screenshots/myfiles.jpeg)
+![My Files](myfiles.jpeg)
 
 #### Shared Files
-![Shared Files](screenshots/sharedfiles.jpeg)
+![Shared Files](sharedfiles.jpeg)
 
 #### Recent Activity
-![Recent Activity](screenshots/recentactivity.jpeg)
+![Recent Activity](recentactivity.jpeg)
 
 ---
 
 ### 🛠 Admin Module
 
 #### Admin Dashboard
-![Admin Dashboard](screenshots/admindashboard.jpeg)
+![Admin Dashboard](admindashboard.jpeg)
 
 #### User Management
-![User Management](screenshots/usermanagement.jpeg)
+![User Management](usermanagement.jpeg)
 
 #### User Details
-![User Details](screenshots/userdetails.jpeg)
+![User Details](userdetails.jpeg)
 
 #### File Management
-![File Management](screenshots/filemanagement.jpeg)
+![File Management](filemanagement.jpeg)
 
 #### Audit Logs
-![Audit Logs](screenshots/auditlogs.jpeg)
+![Audit Logs](auditlogs.jpeg)
 
 ---
 
