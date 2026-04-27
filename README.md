@@ -105,7 +105,7 @@ Additionally, Role-Based Access Control (RBAC) is implemented to restrict access
 ![User Management](usermanagement.jpeg)
 
 #### User Details
-![User Detailes](userdetail.jpeg)
+![User Detailes](userdetailes.jpeg)
 
 #### File Management
 ![File Management](filemanagement.jpeg)
